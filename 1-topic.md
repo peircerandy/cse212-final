@@ -11,7 +11,8 @@ Other important terms to remember are `enqueue` and `dequeue`. **Enqueuing** is 
 ## Common Uses
 Queues have many practical uses:
 - When your listening to your favorite music player such as Spotify the next song that plays comes from the **queue**, you can add a song to the **queue** (_enqueue_) and it will be played after all the other songs that have already been added, the next song to play will be the one added before all of the other songs.
-- The 
+- Managing a the use of resources on a system such as a CPU processing the first task that needed to use it first
+- Web server traffic, handling the requests of the clients in order of the requests.
 
 ## Performance and implementation in Python
 For the sake of this tutorial we will be using python to demonstrate using a queue. 
