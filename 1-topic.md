@@ -15,10 +15,15 @@ Queues have many practical uses:
 - Web server traffic, handling the requests of the clients in order of the requests.
 
 ## Performance and implementation in Python
-For the sake of this tutorial we will be using python to demonstrate using a queue. 
+For the sake of this tutorial we will be using python to demonstrate using a queue.
 
+
+
+<!-- Example -->
 ## Example:
-
+```python-interactive
+print(1)
+```
 
 <!-- Problem to Solve -->
 ## Problem to Solve: Task List
