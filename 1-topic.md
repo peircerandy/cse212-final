@@ -15,13 +15,25 @@ Queues have many practical uses:
 - Web server traffic, handling the requests of the clients in order of the requests.
 
 ## Performance and implementation in Python
-For the sake of this tutorial we will be using python to demonstrate using a queue.
+For the sake of this tutorial we will be using python to demonstrate using a queue. A queue could be implemented by using a list but, another simple way is to use the "deque" class from the "collections" module built into python. The main advantage to using the deque class over a list is that it with a list the dequeue operation takes O(n) time complexity while the deque function for dequeueing takes O(1) time complexity. This is accomplished using a [linked list](2-topic.md) instead of an array (list) to implement the queue.
+
+To be able to use the deque class you must include it at the beginning of your python code:
+```python
+from collections import deque
+```
+Then it needs to be initialized:
+```python
+# initialize with name queue
+queue = deque
+```
+
+
 
 
 
 <!-- Example -->
 ## Example:
-```python-interactive
+```python
 print(1)
 ```
 
