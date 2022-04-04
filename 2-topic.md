@@ -17,7 +17,11 @@ Liked Lists are another form of lists that solve some of these problems. In a li
 If you followed my tutorial on [Queues](1-topic.md) then you might remember that the "deque" python class we used to implement a queue is a linked list. Well, since that class is a linked list it actually allows us to use it as one.
 
 <!-- Example --> 
-## Example:
+## Example: Making a Linked list
+
+``` python
+
+```
 
 <!-- Problem to Solve -->
 ## Problem to Solve:
