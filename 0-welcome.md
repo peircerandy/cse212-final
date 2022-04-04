@@ -1,6 +1,6 @@
 # Data Structures Tutorial
 
-Welcome to the Data Structures Tutorial. Every programmer needs to know these essenatial data structures as they are uses frequently and are the building blocks of many programs:
+Welcome to the Data Structures Tutorial. Every programmer needs to know these essential data structures as they are uses frequently and are the building blocks of many programs:
 
 - [Queues](1-topic.md)
 - [Linked Lists](2-topic.md)
