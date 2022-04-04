@@ -6,11 +6,15 @@ Trees are a data type? Yep! Just think about it. A tree starts with its trunk, t
 
 <!-- Common uses -->
 ## Common Uses
-- Decision trees, each each branch represents a different decision that could be made with certain decisions leading to different future decisions.Often used in Artificial intelligence programs such as video game NPCs. 
-- File Systems. On Windows the C drive is the **root** node (first node in the tree) and each file is a **child** of it.
+- Decision trees. Each each branch represents a different decision that could be made with certain decisions leading to different future decisions.Often used in Artificial intelligence programs such as video game NPCs. 
+- File Systems. On Windows the C drive is the **root** node (first node in the tree) and each file is a **child**, or branch of it. 
+- Binary Search Trees (BST). Used to quickly find, insert, and delete sorted data. It is much faster to find a data item from a BST than from a linked list because it doesn't have to traverse through each item. 
+
 <!-- Operations -->
 ## Operations and Performance
 Trees are very similar to [linked lists](2-topic.md). Trees, like liked lists, also use **nodes** to represent data. Each node contains a variable  for the data, a variable that links to its **parent** node (the node it branches from), and a variable with a link for each of its branches. 
+
+
  
 
 <!-- Example -->
