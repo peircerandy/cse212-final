@@ -1,9 +1,11 @@
 from collections import deque
 
+# enqueue functionality
 def addtask(tasks):
     task = input("\nWhat is the task? ")
     tasks.append(task)
     
+# dequeue functionality
 def finishtask(tasks):
     if len(tasks) > 0:
         task = tasks.popleft()
@@ -27,11 +29,11 @@ def main():
         print("n: add new task, f: mark next task complete")
         command = input("Enter a command: ")
         if command == 's': 
-                showtasks(tasks)
+                showtasks(tasks) 
         if command == 'n': 
-                addtask(tasks)
+                addtask(tasks) # enqueue
         if command == 'f': 
-                finishtask(tasks)
+                finishtask(tasks) # dequeue
         print()
 
 main()
