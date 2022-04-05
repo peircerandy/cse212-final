@@ -74,10 +74,16 @@ while (not done):
     if(input() == 'y'):
         done = True
 ```
-[Example Code](exampleQ.py)
+
+###### [Example Code](exampleQ.py)
 
 <!-- Problem to Solve -->
 ## Problem to Solve: Task List
+
+While you are at work your boss comes by every once in while and gives you a new task to accomplish. Sometimes he gives you a new task before you've finished the old one and other times he gives you multiple tasks at a time. He expects you to complete each task in the order he gives them to you.
+
+Create a python program that uses a queue to keep track of all of the tasks your boss gives you.
+
 <!-- Link to solution -->
 You can check your code with the solution here: [Solution](tbd.py)
 
