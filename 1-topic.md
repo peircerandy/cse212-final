@@ -134,7 +134,16 @@ While you are at work your boss comes by every once in while and gives you a new
 
 Create a python program that uses a queue to keep track of all of the tasks your boss gives you.
 
-Example Execution:
+> ### Hints
+>
+>- Use a while loop inside of `main()` to get input and display output
+>- Create 3 functions in addition to `main()`
+>
+>   - `addtask()`: implements enqueue functionality
+>   - `finishtask()`: implements dequeue functionality
+>   - `showtasks()`: shows a numbered list of each task in the order they need to be completed
+
+Example of execution:
 
 ``` terminal
 Commands -- q: quit, s: see tasks, 
