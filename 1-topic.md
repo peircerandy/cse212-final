@@ -64,8 +64,8 @@ while (not done):
     print("repeat back? (y/n): ")
     repeat = input()
     if(repeat == "y"):
-        print(len(words))
-        print("How many items? ")
+        print("Number of items in the queue:",len(words))
+        print("Number of items to repeat? ")
         numitems = int(input())
         for i in range(numitems):
           if len(words) > 0:
@@ -74,6 +74,7 @@ while (not done):
     if(input() == 'y'):
         done = True
 ```
+[Example Code](exampleQ.py)
 
 <!-- Problem to Solve -->
 ## Problem to Solve: Task List
