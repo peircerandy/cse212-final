@@ -1,36 +1,39 @@
 from collections import deque
 
-def addtask(queue):
-    print("what is the task? ")
+def addtask(tasks):
+    print("\nWhat is the task? ")
     task = input()
-    queue.append(task)
+    tasks.append(task)
     
-def finishtask(queue):
-    task = queue.popleft()
-    print(f"Task \"{task}\" finished.")
+def finishtask(tasks):
+    if len(tasks) > 0:
+        task = tasks.popleft()
+        print(f"\nTask \"{task}\" finished.")
 
-def quiting(command):
-    if command == 'quit' or \
-        command == 'Quit'or \
-        command == 'q'or \
-        command =='Q' or \
-        command == 'x' or \
-        command == 'done' or \
-        command == 'd' or \
-        command == 'Done' or \
-        command == 'D':
-            return True
-    else:
-        return False
+def showtasks(tasks):
+    if (len(tasks) <= 0):
+        print("\nNo Tasks")
+        return
+    print("\n Tasks:")
+    num = 1
+    for task in tasks:
+        print(f"{num}. {task}")
+        num +=1
 
 def main():
     tasks = deque()
     command = None
-    while(not quiting(command)):
-        print("Commands -- q: quit, s: see tasks, n: add new task, f: mark next task complete")
+    while(command != 'q'):
+        print("Commands -- q: quit, s: see tasks, ")
+        print("n: add new task, f: mark next task complete")
         print("Enter a command:")
         command = input()
-        
-
+        if command == 's': 
+                showtasks(tasks)
+        if command == 'n': 
+                addtask(tasks)
+        if command == 'f': 
+                finishtask(tasks)
+        print()
 
 main()

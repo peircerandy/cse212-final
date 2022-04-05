@@ -84,8 +84,197 @@ While you are at work your boss comes by every once in while and gives you a new
 
 Create a python program that uses a queue to keep track of all of the tasks your boss gives you.
 
+Example Execution:
+
+``` terminal
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+s
+
+No Tasks
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+n
+
+What is the task? 
+do nothin
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+s
+
+ Tasks:
+1. do nothin
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+f
+
+Task "do nothin" finished.
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+s
+
+No Tasks
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+n
+
+What is the task? 
+Sort files
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+s
+
+ Tasks:
+1. Sort files
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+n
+
+What is the task? 
+write memo
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+n
+
+What is the task? 
+crunch numbers
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+s
+
+ Tasks:
+1. Sort files
+2. write memo
+3. crunch numbers
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+make food
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+s
+
+ Tasks:
+1. Sort files
+2. write memo
+3. crunch numbers
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+n
+
+What is the task? 
+make food
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+s
+
+ Tasks:
+1. Sort files
+2. write memo
+3. crunch numbers
+4. make food
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+f
+
+Task "Sort files" finished.
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+s
+
+ Tasks:
+1. write memo
+2. crunch numbers
+3. make food
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+f
+
+Task "write memo" finished.
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+s
+
+ Tasks:
+1. crunch numbers
+2. make food
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+n
+
+What is the task? 
+take a break
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+s
+
+ Tasks:
+1. crunch numbers
+2. make food
+3. take a break
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+f
+
+Task "crunch numbers" finished.
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+s
+
+ Tasks:
+1. make food
+2. take a break
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command:
+q
+```
+
 <!-- Link to solution -->
-You can check your code with the solution here: [Solution](tbd.py)
+You can check your code with the solution here: [Solution](taskList.py)
 
 ### [Back to Welcome Page](0-welcome.md)
 
