@@ -1,8 +1,7 @@
 from collections import deque
 
 def addtask(tasks):
-    print("\nWhat is the task? ")
-    task = input()
+    task = input("\nWhat is the task? ")
     tasks.append(task)
     
 def finishtask(tasks):
@@ -26,8 +25,7 @@ def main():
     while(command != 'q'):
         print("Commands -- q: quit, s: see tasks, ")
         print("n: add new task, f: mark next task complete")
-        print("Enter a command:")
-        command = input()
+        command = input("Enter a command: ")
         if command == 's': 
                 showtasks(tasks)
         if command == 'n': 

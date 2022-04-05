@@ -89,188 +89,166 @@ Example Execution:
 ``` terminal
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-s
+Enter a command: s
 
 No Tasks
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-n
+Enter a command: n
 
-What is the task? 
-do nothin
+What is the task? Do nothin
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-s
+Enter a command: s
 
  Tasks:
-1. do nothin
+1. Do nothin
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-f
+Enter a command: n
 
-Task "do nothin" finished.
-
-Commands -- q: quit, s: see tasks, 
-n: add new task, f: mark next task complete
-Enter a command:
-s
-
-No Tasks
+What is the task? do something
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-n
-
-What is the task? 
-Sort files
-
-Commands -- q: quit, s: see tasks, 
-n: add new task, f: mark next task complete
-Enter a command:
-s
+Enter a command: s
 
  Tasks:
-1. Sort files
+1. Do nothin
+2. do something
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-n
+Enter a command: f
 
-What is the task? 
-write memo
+Task "Do nothin" finished.
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-n
-
-What is the task? 
-crunch numbers
-
-Commands -- q: quit, s: see tasks, 
-n: add new task, f: mark next task complete
-Enter a command:
-s
+Enter a command: s
 
  Tasks:
-1. Sort files
-2. write memo
-3. crunch numbers
+1. do something
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-make food
+Enter a command: n
+
+What is the task? Sort files
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-s
+Enter a command: n
+
+What is the task? read memo 
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command: s
+
+ Tasks:
+1. do something
+2. Sort files
+3. read memo
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command: f
+
+Task "do something" finished.
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command: s
 
  Tasks:
 1. Sort files
-2. write memo
-3. crunch numbers
+2. read memo
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-n
-
-What is the task? 
-make food
+Enter a command: clean office
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-s
+Enter a command: n
+
+What is the task? clean office
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command: s
 
  Tasks:
 1. Sort files
-2. write memo
-3. crunch numbers
-4. make food
+2. read memo
+3. clean office
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-f
+Enter a command: f
 
 Task "Sort files" finished.
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-s
+Enter a command: s
 
  Tasks:
-1. write memo
-2. crunch numbers
-3. make food
+1. read memo
+2. clean office
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-f
+Enter a command: f
 
-Task "write memo" finished.
+Task "read memo" finished.
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-s
+Enter a command: n
+
+What is the task? take a break
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command: s
 
  Tasks:
-1. crunch numbers
-2. make food
-
-Commands -- q: quit, s: see tasks, 
-n: add new task, f: mark next task complete
-Enter a command:
-n
-
-What is the task? 
-take a break
-
-Commands -- q: quit, s: see tasks, 
-n: add new task, f: mark next task complete
-Enter a command:
-s
-
- Tasks:
-1. crunch numbers
-2. make food
-3. take a break
-
-Commands -- q: quit, s: see tasks, 
-n: add new task, f: mark next task complete
-Enter a command:
-f
-
-Task "crunch numbers" finished.
-
-Commands -- q: quit, s: see tasks, 
-n: add new task, f: mark next task complete
-Enter a command:
-s
-
- Tasks:
-1. make food
+1. clean office
 2. take a break
 
 Commands -- q: quit, s: see tasks, 
 n: add new task, f: mark next task complete
-Enter a command:
-q
+Enter a command: f
+
+Task "clean office" finished.
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command: s
+
+ Tasks:
+1. take a break
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command: f
+
+Task "take a break" finished.
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command: s
+
+No Tasks
+
+Commands -- q: quit, s: see tasks, 
+n: add new task, f: mark next task complete
+Enter a command: q
 ```
 
 <!-- Link to solution -->
