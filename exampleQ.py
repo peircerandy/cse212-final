@@ -1,22 +1,28 @@
-from collections import deque
+from collections import deque 
 
-words = deque()
+# This function implements the enqueue
+def getwords(words):
+  word = input("Say something: ")
+  words.append(word)
 
-print("Hello, I will repeat back everything you have said to me when you tell me to!")
-done = False
-while (not done):
-    print("Say something: ")
-    word = input()
-    words.append(word)
-    print("repeat back? (y/n): ")
-    repeat = input()
-    if(repeat == "y"):
-        print("Number of items in the queue:",len(words))
-        print("Number of items to repeat? ")
-        numitems = int(input())
-        for i in range(numitems):
-          if len(words) > 0:
-            print(words.popleft())
-    print("Done? (y/n): ")
-    if(input() == 'y'):
+# This function implements the dequeue
+def repeat(words):
+  print("Number of items in the queue:",len(words)) # neat function to use with queues
+  numitems = int(input("Number of items to repeat? "))
+  for i in range(numitems):
+    if len(words) > 0: # Can't dequeue from and empty queue
+      print(words.popleft())
+  
+
+def main():
+  words = deque()
+  print("Hello, I will repeat back everything you have said to me when you tell me to!")
+  done = False
+  while (not done):
+    getwords(words) # enqueue
+    if(input("repeat back? (y/n): ") == "y"):
+        repeat(words) # dequeue
+    if(input("Done? (y/n): ") == 'y'):
         done = True
+          
+main()          
