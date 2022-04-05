@@ -15,4 +15,3 @@ For questions or comments, please send them to:
 Randy Peirce, BYU-Idaho, CSE 212, Section 2
 
 rpeirce@byui.edu
-
