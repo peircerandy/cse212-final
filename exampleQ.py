@@ -24,5 +24,5 @@ def main():
         repeat(words) # dequeue
     if(input("Done? (y/n): ") == 'y'):
         done = True
-          
+    print()
 main()          
