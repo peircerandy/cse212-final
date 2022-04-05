@@ -77,6 +77,7 @@ def main():
         repeat(words) # dequeue
     if(input("Done? (y/n): ") == 'y'):
         done = True
+    print()
           
 main()          
 ```
@@ -90,12 +91,15 @@ Number of items in the queue: 1
 Number of items to repeat? 2
 hi
 Done? (y/n): n
+
 Say something: Hello 
 repeat back? (y/n): n
 Done? (y/n): n
+
 Say something: How
 repeat back? (y/n): n
 Done? (y/n): n
+
 Say something: are
 repeat back? (y/n): y
 Number of items in the queue: 3
@@ -103,12 +107,14 @@ Number of items to repeat? 2
 Hello
 How
 Done? (y/n): n
+
 Say something: you
 repeat back? (y/n): y
 Number of items in the queue: 2
 Number of items to repeat? 1
 are
 Done? (y/n): n
+
 Say something: doing
 repeat back? (y/n): y 
 Number of items in the queue: 2
@@ -116,6 +122,7 @@ Number of items to repeat? 10
 you
 doing
 Done? (y/n): y
+
 ```
 
 ###### [source code](exampleQ.py)
