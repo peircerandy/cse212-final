@@ -50,7 +50,7 @@ item = queue.popleft()
 <!-- Example -->
 ## Example: Repeat after me
 
-:::code language="python" source="exampleQ.py":::
+:::code language="python" source="/home/randy/Documents/GitHub/cse212-final/exampleQ.py":::
 
 <!-- Problem to Solve -->
 ## Problem to Solve: Task List
