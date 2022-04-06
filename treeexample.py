@@ -51,3 +51,29 @@ class Tree:
                     else:
                         curr == curr.right
                         
+    def __iter__(self):
+        if self.root None:
+            yield 
+    
+    def __str__(self):
+        output = "Tree["
+        if self.root == None:
+        
+        else:
+            done = False
+            curr = self.root
+            while not done:
+                if curr.data == None
+                if cu<= curr.data:
+                    if curr.left.data == data:
+                        return True
+                    else:
+                        curr = curr.left
+                else:
+                    if curr.right.data == None:
+                        return True
+                    else:
+                        curr == curr.right
+
+tree = Tree()
+tree.insert(2)
