@@ -24,6 +24,12 @@ class CircularLinkedList:
             new_node.next = self.tail.next
             self.tail.next = new_node
             self.tail = new_node
+    
+    def pop(self):
+        
+        if self.tail is not None:
+            self.tail = self.tail.next
+
             
     def __iter__(self):
         
@@ -55,6 +61,10 @@ cll.append(2)
 cll.append(2)
 cll.append(2)
 cll.append(3)
+print(cll)
+print(cll.tail.data)
+print(cll.tail.next.data)
+cll.pop()
 print(cll)
 print(cll.tail.data)
 print(cll.tail.next.data)
