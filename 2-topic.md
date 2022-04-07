@@ -19,15 +19,21 @@ Liked Lists are another form of lists that solve some of these problems. In a li
 
 If you followed my tutorial on [Queues](1-topic.md) then you might remember that the "deque" python class we used to implement a queue is a linked list. Well, since that class is a linked list it actually allows us to use it as one.
 
+Since the data for a linked lists can only be accessed by links from neighboring nodes pointers to the **head** (first node in the list) and **tail** (last node in the list) are saved as the means for accessing the rest of the nodes, so there is typically a node to access 
+
 <!-- Example -->
-## Example: Making a Linked list
+## Example: Making a Circular  Linked list
+
+For a better understanding of how linked lists work here is and example of an implementation of a singly-linked list Circular Linked list. Instead of having the _next_ pointer of the tail link to nothing it is linked to the first item in the list. Because of this we no longer need a pointer to the head because it can be accessed as the next node of the tail. This type of linked list is useful when the data needs to be accessed repeatedly in the same order.
 
 ``` python
 
 ```
 
 <!-- Problem to Solve -->
-## Problem to Solve:
+## Problem to Solve: Improve Circular Linked Lists
+
+You may have noticed with this singly-linked implementation that removing an item from the list takes O(n) time. Your challenge is to add take the Linked List from the example and turn it into a _doubly-linked_ list and implement the `remove` function so that it has O(1) time complexity (so that it doesn't need to loop through the entire list).
 
 <!-- Link to solution -->
 You can check your code with the solution here: [Solution](tbd.py)
