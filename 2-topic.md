@@ -19,7 +19,7 @@ Liked Lists are another form of lists that solve some of these problems. In a li
 
 If you followed my tutorial on [Queues](1-topic.md) then you might remember that the "deque" python class we used to implement a queue is a linked list. Well, since that class is a linked list it actually allows us to use it as one.
 
-Since the data for a linked lists can only be accessed by links from neighboring nodes pointers to the **head** (first node in the list) and **tail** (last node in the list) are saved as the means for accessing the rest of the nodes, so there is typically a node to access 
+Since the data for a linked lists can only be accessed by links from neighboring nodes pointers to the **head** (first node in the list) and **tail** (last node in the list) are saved as the means for accessing the rest of the nodes, so there is typically functions to access them. With the `deque` class these are (using `list` for the name of initialized `deque` object) `list.appendleft(value)`and `list.append(value)` for inserting data at the head or the tail respectively, each with O(1) time complexity; `list.popleft()` and `list.pop()` for removing data (nodes) from the head or tail respectively, also typically with 0(1) time complexity. Linked lists can also have functions for getting, adding or removing data from the middle of the Linked lists such as `del list[i]`, but these operations take O(n) time complexity, so if they are used frequently then it would be better to use a dynamic array instead of a linked list.
 
 <!-- Example -->
 ## Example: Making a Circular  Linked list
