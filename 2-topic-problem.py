@@ -41,10 +41,9 @@ class CircularLinkedList:
         
         curr = self.tail
         if index < 0:
-            # since we don't have a pointer to the previous node we have to loop
-            # through the entire list to change its "next" pointer so that it
-            # no longer points to the removed tail.
-            for i in range(index, -1):
+            # now that we do have a pointer to the previous node
+            # removing the tail is O(1)
+            for i in range(index, -1): # index = -1 = tail skips this loop
                 curr = curr.prev
             curr.prev.next = curr.next
             curr.next.prev = curr.prev
@@ -56,7 +55,7 @@ class CircularLinkedList:
             # removing the head is actually O(1) since we start 
             # with access to is's previous node
             curr = self.tail.next
-            for i in range(index):# index = 0 = head skips this loop
+            for i in range(index): # index = 0 = head skips this loop
                 curr = curr.next
             if curr == self.tail:
                 self.tail = curr.prev
