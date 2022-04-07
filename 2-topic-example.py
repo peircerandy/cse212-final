@@ -7,7 +7,7 @@ class CircularLinkedList:
         def __init__(self, data):
             
             self.data = data
-            self.next = None
+            self.next = None # pointer to the next  value
         
     def __init__(self):
         
@@ -17,7 +17,7 @@ class CircularLinkedList:
         
         new_node = CircularLinkedList.Node(value)
         
-        if self.tail is None:
+        if self.tail is None: # empty list
             self.tail = new_node
             self.tail.next = self.tail
         else:
@@ -36,6 +36,9 @@ class CircularLinkedList:
         
         if index < 0:
             curr = self.tail.next
+            # since we don't have a pointer to the previous node we have to loop
+            # through the entire list to change its "next" pointer so that it
+            # no longer points to the removed tail.
             while True:
                 if curr.next == self.tail:
                     curr.next = self.tail.next

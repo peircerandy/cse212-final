@@ -33,7 +33,7 @@ For a better understanding of how linked lists work here is and example of an im
 <!-- Problem to Solve -->
 ## Problem to Solve: Improve Circular Linked Lists
 
-You may have noticed with this singly-linked implementation that removing an item from the list takes O(n) time. Your challenge is to add take the Linked List from the example and turn it into a _doubly-linked_ list and implement the remove function (`pop()`) so that it has O(1) time complexity (so that it doesn't need to loop through the entire list).
+You may have noticed with this singly-linked implementation that removing an item from the list takes O(n) time. Your challenge is to add take the Linked List from the example and turn it into a _doubly-linked_ list and implement the remove function (`pop()`) so that it has O(1) time complexity (so that it doesn't need to loop through the entire list to remove the last item).
 
 <!-- Link to solution -->
 You can check your code with the solution here: [Solution](tbd.py)
