@@ -27,9 +27,9 @@ class CircularLinkedList:
     
     def pop(self, index = -1):
         
-        if self.tail == None:
+        if self.tail == None: # empty list
             return None
-        if self.tail == self.tail.next:
+        if self.tail == self.tail.next: # single item in the list
                 data = self.tail.data
                 self.tail = None
                 return data
@@ -49,10 +49,15 @@ class CircularLinkedList:
                     curr = curr.next
         else:
             curr = self.tail
-            for i in range(index):
+            # removing the head is actually O(1) since we start 
+            # with access to is's previous node
+            for i in range(index): # index = 0 = head skips this loop
                 curr = curr.next
             data = curr.next.data
+            if curr.next == self.tail:
+                self.tail = curr
             curr.next = curr.next.next
+            return data
             return data
         
             
@@ -83,33 +88,49 @@ class CircularLinkedList:
             
             
 # Sample Tests
+print("======pop from Empty list======")
 cll = CircularLinkedList()
 print(cll)
-print(cll.pop())
+print(cll.pop()) # None
+print("======append and pop from Single item list======")
 cll.append(1)
 print(cll)
-print(cll.tail.data)
-print(cll.tail.next.data)
-print(cll.pop())
+print(cll.tail.data) # 1
+print(cll.tail.next.data) # 1
+print(cll.pop()) # 1
 print(cll)
+print("======append======")
 cll.append(1)
 cll.append(2)
 cll.append(5)
 cll.append(3)
-cll.append(3)
+cll.append(-3)
 cll.append(4)
 print(cll)
-print(cll.tail.data)
-print(cll.tail.next.data)
-print(cll.pop())
+print(cll.tail.data) # 4
+print(cll.tail.next.data) # 1
+print("======Test remove tail -- pop()======")
+print(cll.pop()) # 4
 print(cll)
-print(cll.tail.data)
-print(cll.tail.next.data)
-print(cll.pop(0))
+print(cll.tail.data) # -3
+print(cll.tail.next.data) # 1
+print("======Test remove head -- pop(0)======")
+print(cll.pop(0)) # 1
 print(cll)
-print(cll.tail.data)
-print(cll.tail.next.data)
-print(cll.pop(5))
+print(cll.tail.data) # -3
+print(cll.tail.next.data) # 2
+print("======Test Circle remove -- pop(5)======")
+print(cll.pop(5)) # 5
 print(cll)
-print(cll.tail.data)
-print(cll.tail.next.data)
+print(cll.tail.data) # -3
+print(cll.tail.next.data) # 2
+print("======Test  remove from middle -- pop(1)======")
+print(cll.pop(1)) # 3
+print(cll)
+print(cll.tail.data) # -3
+print(cll.tail.next.data) # 2
+print("======Test remove tail method 2 -- pop(1)======")
+print(cll.pop(1)) # -3
+print(cll)
+print(cll.tail.data) # 2
+print(cll.tail.next.data) # 2

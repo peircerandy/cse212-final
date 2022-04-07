@@ -28,15 +28,220 @@ For a better understanding of how linked lists work here is and example of an im
 
 ``` python
 
+
+class CircularLinkedList:
+    
+    class Node:
+        
+        def __init__(self, data):
+            
+            self.data = data
+            self.next = None # pointer to the next  value
+        
+    def __init__(self):
+        
+        self.tail = None
+        
+    def append(self, value):
+        
+        new_node = CircularLinkedList.Node(value)
+        
+        if self.tail is None: # empty list
+            self.tail = new_node
+            self.tail.next = self.tail
+        else:
+            new_node.next = self.tail.next
+            self.tail.next = new_node
+            self.tail = new_node
+    
+    def pop(self, index = -1):
+        
+        if self.tail == None: # empty list
+            return None
+        if self.tail == self.tail.next: # single item in the list
+                data = self.tail.data
+                self.tail = None
+                return data
+        
+        if index < 0:
+            curr = self.tail.next
+            # since we don't have a pointer to the previous node we have to loop
+            # through the entire list to change its "next" pointer so that it
+            # no longer points to the removed tail.
+            while True:
+                if curr.next == self.tail:
+                    curr.next = self.tail.next
+                    data = self.tail.data
+                    self.tail = curr
+                    return data 
+                else:
+                    curr = curr.next
+        else:
+            curr = self.tail
+            # removing the head is actually O(1) since we start 
+            # with access to is's previous node
+            for i in range(index): # index = 0 = head skips this loop
+                curr = curr.next
+            data = curr.next.data
+            if curr.next == self.tail:
+                self.tail = curr
+            curr.next = curr.next.next
+            return data
+            return data
+        
+            
+    def __iter__(self):
+        
+        if self.tail == None:
+            return
+        
+        curr = self.tail.next
+        while True:
+            yield curr.data 
+            curr = curr.next
+            if curr == self.tail.next:
+                break
+            
+    def __str__(self) -> str:
+        
+        output = "CircularLinkedList["
+        first = True
+        for value in self:
+            if first:
+                first = False
+            else:
+                output += ", "
+            output += str(value)
+        output += "]"
+        return output
+            
+            
+# Sample Tests
+print("======pop from Empty list======")
+cll = CircularLinkedList()
+print(cll)
+print(cll.pop()) # None
+print("======append and pop from Single item list======")
+cll.append(1)
+print(cll)
+print(cll.tail.data) # 1
+print(cll.tail.next.data) # 1
+print(cll.pop()) # 1
+print(cll)
+print("======append======")
+cll.append(1)
+cll.append(2)
+cll.append(5)
+cll.append(3)
+cll.append(-3)
+cll.append(4)
+print(cll)
+print(cll.tail.data) # 4
+print(cll.tail.next.data) # 1
+print("======Test remove tail -- pop()======")
+print(cll.pop()) # 4
+print(cll)
+print(cll.tail.data) # -3
+print(cll.tail.next.data) # 1
+print("======Test remove head -- pop(0)======")
+print(cll.pop(0)) # 1
+print(cll)
+print(cll.tail.data) # -3
+print(cll.tail.next.data) # 2
+print("======Test Circle remove -- pop(5)======")
+print(cll.pop(5)) # 5
+print(cll)
+print(cll.tail.data) # -3
+print(cll.tail.next.data) # 2
+print("======Test  remove from middle -- pop(1)======")
+print(cll.pop(1)) # 3
+print(cll)
+print(cll.tail.data) # -3
+print(cll.tail.next.data) # 2
+print("======Test remove tail method 2 -- pop(1)======")
+print(cll.pop(1)) # -3
+print(cll)
+print(cll.tail.data) # 2
+print(cll.tail.next.data) # 2
+
 ```
+##### [source code](2-topic-example.py)
 
 <!-- Problem to Solve -->
 ## Problem to Solve: Improve Circular Linked Lists
 
-You may have noticed with this singly-linked implementation that removing an item from the list takes O(n) time. Your challenge is to add take the Linked List from the example and turn it into a _doubly-linked_ list and implement the remove function (`pop()`) so that it has O(1) time complexity (so that it doesn't need to loop through the entire list to remove the last item).
+You may have noticed with this singly-linked implementation that removing an item from the end of the list takes O(n) time when I said earlier that that takes O(1). With this implementation that is only possible with a doubly-linked list. Your challenge is to take the Linked List from the example and turn it into a _doubly-linked_ list and to update the remove function (`pop()`) so that it has O(1) time complexity when removing the tail (it doesn't need to go through a loop). Also add into the `pop()` function the ability to remove negative indexes from the list just as you can remove positive indexes (with the absolute value of some indexes greater than the number of items in the list).
+
+Here is what the output of some possible test cases could look like:
+
+``` terminal
+======pop from Empty list======
+CircularLinkedList[]
+None
+======append and pop from Single item list======
+CircularLinkedList[1]
+1
+1
+1
+CircularLinkedList[]
+======append======
+CircularLinkedList[1, 2, 5, 3, -3, 4]
+4
+1
+======Test remove tail -- pop()======
+4
+CircularLinkedList[1, 2, 5, 3, -3]
+-3
+1
+======Test remove head -- pop(0)======
+1
+CircularLinkedList[2, 5, 3, -3]
+-3
+2
+======Test Circle remove -- pop(5)======
+5
+CircularLinkedList[2, 3, -3]
+-3
+2
+======Test  remove from middle -- pop(1)======
+3
+CircularLinkedList[2, -3]
+-3
+2
+======Test remove tail method 2 -- pop(1)======
+-3
+CircularLinkedList[2]
+2
+2
+======Test more appends======
+CircularLinkedList[2, 6, 7, 8]
+8
+2
+======Test backwards remove from middle -- pop(-3)======
+6
+CircularLinkedList[2, 7, 8]
+8
+2
+======Test remove tail method 3 -- pop(-4)======
+8
+CircularLinkedList[2, 7]
+7
+2
+======Test remove head method 2 -- pop(-2)======
+2
+CircularLinkedList[7]
+7
+7
+```
+
+> Hints  
+>
+> - Removing the head is already an O(1) operation, so removing the tail and removing negative integers can be implemented in much the same way, but with different starting and ending positions for the for loop, and by iterating to the previous node instead of the next one.
+> - You will also need to update the constructor method (`__init__`) for the node class as well as the `append` method to support a pointer to the previous node.
+>
 
 <!-- Link to solution -->
-You can check your code with the solution here: [Solution](tbd.py)
+You can check your code with the solution here: [Solution](2-topic-problem.py)
 
 ### [Back to Welcome Page](0-welcome.md)
 
