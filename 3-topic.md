@@ -31,8 +31,17 @@ Binary Search Trees typically have functions with the following functions:
 <!-- Example -->
 ## Example: Making a BST
 
+The following code is an example of how a Binary Search Tree could be implemented. This example does not show a Balanced Binary Search Tree so it is vulnerable to becoming lopsided.
+
+> Note
+> Because many of the operations on BSTs are repetitive actions that can also be done on the subtrees, it is very useful to use recursion in the implementation of these functions. Recursion is when a function calls itself, passing in a value that is updated with each call to iterate the operation forward until some base case is met.
+
+``` python
+
+```
+
 <!-- Problem to Solve -->
-## Problem to Solve:
+## Problem to Solve: Book Sort
 
 <!-- Link to Solution -->
 You can check your code with the solution here: [Solution](tbd.py)
