@@ -180,13 +180,105 @@ print(tree) # BST[1, 2, 5, 6]
 print(tree.height()) # 3
 ```
 
-### [source code](exampleBST.py)
+#### [source code](exampleBST.py)
 
 <!-- Problem to Solve -->
 ## Problem to Solve: Book Sort
 
+You have a vast collection of books in your home library and you want to keep track of all of the titles you own. You frequently add new books to your collection or give books form your collection to others.
+
+Download the [exampleBST.py](exampleBST.py) file that includes the implementation of the tree shown above. Include it in a new python program (using `from exampleBST import BST`) that uses the BST class to keep track of book titles. Create a simple interface to go with it as shown in the execution example.
+
+> ### Hints
+>
+>- Use a while loop inside of `main()` to get input and display output
+>- Create 4 functions in addition to `main()`
+>
+>   - `add_title()`: gets title from input and _inserts_ the title into the tree
+>   - `remove_title()`: gets title from input and _removes_ the title from the tree
+>   - `view_collection()`: shows a numbered list of each title in Alphabetical order
+>     - since we are putting strings into the binary tree instead of numbers this is the method that the tree uses to sort and order the data
+>   - `search_collection()`: gets title from input and searches the tree to see if it _contains_ the title
+
+Example of execution:
+
+``` terminal
+r: remove title, v: view collection, 
+s: search collection for title
+Enter a command: v
+
+No Books
+
+Commands -- q: quit, a: add book title, 
+r: remove title, v: view collection, 
+s: search collection for title
+Enter a command: a
+
+Input Book Title: Huck Finn      
+
+Commands -- q: quit, a: add book title, 
+r: remove title, v: view collection, 
+s: search collection for title
+Enter a command: a
+
+Input Book Title: Tom Sawyer
+
+Commands -- q: quit, a: add book title, 
+r: remove title, v: view collection, 
+s: search collection for title
+Enter a command: v
+
+ Books:
+1. Huck Finn
+2. Tom Sawyer
+
+Commands -- q: quit, a: add book title, 
+r: remove title, v: view collection, 
+s: search collection for title
+Enter a command: s
+
+Input Book Title: Tom Sawyer
+Tom Sawyer is in your collection
+
+Commands -- q: quit, a: add book title, 
+r: remove title, v: view collection, 
+s: search collection for title
+Enter a command: s
+
+Input Book Title: Tom
+Tom is not in your collection
+
+Commands -- q: quit, a: add book title, 
+r: remove title, v: view collection, 
+s: search collection for title
+Enter a command: r
+
+Input Book Title: Tom Sawyer
+
+Commands -- q: quit, a: add book title, 
+r: remove title, v: view collection, 
+s: search collection for title
+Enter a command: s
+
+Input Book Title: Tom Sawyer
+Tom Sawyer is not in your collection
+
+Commands -- q: quit, a: add book title, 
+r: remove title, v: view collection, 
+s: search collection for title
+Enter a command: v
+
+ Books:
+1. Huck Finn
+
+Commands -- q: quit, a: add book title, 
+r: remove title, v: view collection, 
+s: search collection for title
+Enter a command: q
+```
+
 <!-- Link to Solution -->
-You can check your code with the solution here: [Solution](tbd.py)
+You can check your code with the solution here: [Solution](library.py)
 
 ### [Back to Welcome Page](0-welcome.md)
 
